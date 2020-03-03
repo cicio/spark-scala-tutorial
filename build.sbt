@@ -2,7 +2,7 @@ name          := "spark-scala-tutorial"
 organization  := "com.lightbend"
 description   := "Spark Scala Tutorial"
 version       := "6.0.0"
-scalaVersion  := "2.11.8"
+scalaVersion  := "2.12.10"
 scalacOptions := Seq("-deprecation", "-unchecked", "-encoding", "utf8", "-Xlint")
 excludeFilter in unmanagedSources := (HiddenFileFilter || "*-script.scala")
 unmanagedResourceDirectories in Compile += baseDirectory.value / "conf"
@@ -14,9 +14,9 @@ fork := true
 // Must run Spark tests sequentially because they compete for port 4040!
 parallelExecution in Test := false
 
-val sparkVersion        = "2.3.0"
-val scalaTestVersion    = "3.0.5"
-val scalaCheckVersion   = "1.13.4"
+val sparkVersion        = "2.4.5"
+val scalaTestVersion    = "3.1.0"
+val scalaCheckVersion   = "1.14.3"
 
 libraryDependencies ++= Seq(
   "org.apache.spark"  %% "spark-core"      % sparkVersion,
